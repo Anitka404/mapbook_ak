@@ -12,7 +12,8 @@ def remove_user(users_data: list) -> None:
     user_to_remove = input("Podaj imię znajomego do usunięcia: ")
     for user in users_data:
         if user["name"] == user_to_remove:
-            users.remove(user)
+            users_data.remove(user)
+            break
 
 
 def update_user(users_data: list) -> None:
@@ -21,9 +22,11 @@ def update_user(users_data: list) -> None:
         if user["name"] == user_to_update:
             user["name"] = input("Podaj nowe imię użytkownika: ")
             user["location"] == input("Podaj nową lokalizację: ")
+            break
 
 def update_user_post(users_data: list) -> None:
     user_to_update = input("Podaj imię znajomego do edycji: ")
     for user in users_data:
         if user["name"] == user_to_update:
             user["posts"].append(input("Co słychać? "))
+            break

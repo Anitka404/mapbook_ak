@@ -1,7 +1,3 @@
-# Definicja prostej strukturyzacji, obejmującej przykłądowego użytkownika
-# from os import remove
-# from random import choice
-
 from mapbook_lib.model import users
 
 from mapbook_lib.controler import read_users, add_user, remove_user, update_user, update_user_post
