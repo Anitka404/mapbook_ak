@@ -1,6 +1,7 @@
 from mapbook_lib.model import users
 
-from mapbook_lib.controler import read_users, add_user, remove_user, update_user, update_user_post
+from mapbook_lib.controler import read_users, add_user, remove_user, update_user, update_user_post, get_user_map
+
 
 def main():
     while True:
@@ -11,6 +12,7 @@ def main():
         print("3 - usuwanie znajomego")
         print("4 - update znajomego")
         print("5 - update postów")
+        print("6 - Mapa lokalizacji znajomych")
         choice = input("Wybierz opcję MENU: ")
         print(f"Wybrano opcję {choice}")
         if choice == "0":
@@ -30,6 +32,9 @@ def main():
 
         if choice == "5":
             update_user_post(users)
+
+        if choice == "6":
+            get_user_map(users)
 
 if __name__ == "__main__":
     main()

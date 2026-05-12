@@ -21,12 +21,16 @@ def update_user(users_data: list) -> None:
     for user in users_data:
         if user["name"] == user_to_update:
             user["name"] = input("Podaj nowe imię użytkownika: ")
-            user["location"] == input("Podaj nową lokalizację: ")
+            user["location"] = input("Podaj nową lokalizację: ")
             break
 
 def update_user_post(users_data: list) -> None:
     user_to_update = input("Podaj imię znajomego do edycji: ")
+
     for user in users_data:
         if user["name"] == user_to_update:
             user["posts"].append(input("Co słychać? "))
             break
+
+def get_user_map(userd_data: list)-> None:
+    print("Mapa znajomych będzie dodana później.")
